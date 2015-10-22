@@ -1,0 +1,21 @@
+{
+  "name": "gitlab_ci-hipchat_notifier",
+  "version": "0.1.0",
+  "description": "A simple web service to listen for POSTs from a Gitlab CI webhook, then forward relevent info to Hipchat",
+  "main": "index.js",
+  "author": "Andrew Levine",
+  "scripts": {
+    "start": "node index"
+  },
+  "engines": {
+    "node": "4.0.x"
+  },
+  "dependencies": {
+    "bluebird": "^2.10.0",
+    "body-parser": "^1.14.0",
+    "colors": "^1.1.2",
+    "continuation-local-storage": "^3.1.4",
+    "express": "^4.13.3",
+    "request-promise": "^1.0.1"
+  }
+}
