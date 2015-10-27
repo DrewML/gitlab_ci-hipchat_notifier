@@ -2,6 +2,8 @@
 
 Sends Success/Failure messages to a Hipchat room for a specific Gitlab CI project.
 
+![success message](img/success.png)
+
 ## Install
 
 1. Ensure you have a version of `node.js` >= 4.0.0
@@ -15,6 +17,8 @@ Sends Success/Failure messages to a Hipchat room for a specific Gitlab CI projec
 3. Provide a label for your key, and choose the `Send Notification` scope
 4. Copy the token somewhere (you'll need it shortly), as well as the room ID in the URL of the page
 
+![hipchat config](img/hipchat-config.png)
+
 ## Configure Notifier
 
 1. Open `config.js` in this repo
@@ -26,7 +30,9 @@ Sends Success/Failure messages to a Hipchat room for a specific Gitlab CI projec
 2. Start the Notifier plugin in this repo by running `PORT=8080 npm start`
 3. In your Gitlab project settings, click on `CI Web Hooks`
 4. Add a new hook, following the format below (replace the values in {} with your own):
-```
-http://{PublicIPHere}:8080/ci/{RoomIDHere}
-```
+    ```
+    http://{PublicIPHere}:8080/ci/{RoomIDHere}
+    ```
 5. If you've followed all the steps outlined above, your notifier should now be working
+
+![gitlab](img/gitlab.png)
